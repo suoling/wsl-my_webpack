@@ -1,0 +1,13 @@
+{
+    "definition" : [
+      {
+        "path" : "/mocks/wsl",
+        "morkFile" : "wsl.json"
+      },
+      {
+        "path" : "/mocks/yyy",
+        "morkFile" : "yyy.json"
+      }
+    ]
+  }
+  

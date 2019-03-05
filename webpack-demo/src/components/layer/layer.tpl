@@ -1,7 +1,6 @@
 <div class='layer'>
 
-
-<img src="<%= require('../../assets/bg.png') %>">
+    <img src="<%= require('../../assets/bg.png') %>">
 
     <div>this is <%= name %> layer</div>
    

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress --watch --colors --display-modules"
+    "build": "webpack --progress --watch --colors --display-modules",
+    "dev": "node server/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,18 +17,25 @@
     "babel-preset-latest": "^6.24.1",
     "css-loader": "^1.0.0",
     "ejs-loader": "^0.3.1",
+    "express": "^4.16.4",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "http-proxy-middleware": "^0.19.1",
     "image-webpack-loader": "^4.3.1",
+    "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "node-sass": "^4.9.2",
+    "open-browser-webpack-plugin": "^0.0.5",
     "postcss-loader": "^2.1.6",
     "sass-loader": "^7.0.3",
     "scss-loader": "^0.0.1",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.16.2",
-    "webpack-cli": "^3.1.0"
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-middleware": "^3.6.0",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-hot-middleware": "^2.24.3"
   }
 }

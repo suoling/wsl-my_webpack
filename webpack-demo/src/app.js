@@ -7,7 +7,7 @@ import './components/layer/layer.less';
      var layer = new Layer()
      console.log(layer)
      dom.innerHTML = layer.tpl({
-         name: '药耀源',
+         name: '王锁伶',
          arr: ['apple', 'banana', 'oringe']
      })
  }

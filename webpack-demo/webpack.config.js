@@ -1,11 +1,15 @@
-var htmlWebpackPlugin = require('html-webpack-plugin');
-var path = require('path');
-console.log(__dirname);
-var autoprefixer = require('autoprefixer')
+const htmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const autoprefixer = require('autoprefixer');
+const openBrowserPlugin = require('open-browser-webpack-plugin');
+const webpack = require('webpack');
+
 module.exports = {
     context: __dirname,
-    entry: './src/app.js',
-
+    entry: [
+        'webpack-hot-middleware/client?reload=true',
+        './src/app.js'
+    ],
     output: {
         path: path.join(__dirname, './dist'),
         filename: 'js/[name]-bound.js'//生成后的文件名 为 a-2ea5b2e9b258a8bbba73.js，main-2ea5b2e9b258a8bbba73.js
@@ -60,6 +64,10 @@ module.exports = {
             template: 'index.html',//模板路径
             inject: 'body' //是否自动在模板文件添加 自动生成的js文件链接
 
-        })
+        }),
+        new openBrowserPlugin({ 
+            url: 'http://localhost:3000' 
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 };
